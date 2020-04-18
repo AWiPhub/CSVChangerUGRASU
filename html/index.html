@@ -73,17 +73,50 @@
 </head>
 <body>
     <div class="all">
-        <form action="/ObrFIO" method="post" enctype="multipart/form-data">
-            <div class="upButton ">
-                <input type="file" accept="csv" name="file" id="">
+        <!-- <form action="/ObrAll" method="post" enctype="multipart/form-data">
+            <div class="upButton">
+                <input type="file" accept=".csv" name="filename">
                 <p class="TextInBtUp">Выбрать CSV файл</p>
             </div>
-            <input type="text" name="username" class="inputFIO" id="" placeholder="Введите фамилию">
             <div class="dnButton">
                 <button type="submit" class="SubmitButton"></button>
                 <p class="TextInBtDn">Обработать</p>
             </div>
         </form>
+        
+        <br><br>
+        <form action="/ObrFIO" method="post" enctype="multipart/form-data">
+            <input type="text" name="username" class="inputFIO" placeholder="Введите фамилию">
+            <div class="dnButton">
+                <button type="submit" class="SubmitButton"></button>
+                <p class="TextInBtDn">Обработать по фамилии</p>
+            </div>
+        </form> -->
+
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="upButton">
+                <input type="file" accept=".csv" name="filename">
+                <p class="TextInBtUp">Выбрать CSV файл</p>
+            </div>
+            <div>
+                <div class="dnButton">
+                    <button type="submit" formaction="/ObrAll" class="SubmitButton"></button>
+                    <p class="TextInBtDn">Обработать</p>
+                </div>
+            </div>
+            
+            <br><br>
+            <div>
+                <input type="text" name="username" class="inputFIO" placeholder="Введите фамилию">
+                <div class="dnButton">
+                    <button type="submit" formaction="/ObrFIO" class="SubmitButton"></button>
+                    <p class="TextInBtDn">Обработать по фамилии</p>
+                </div>
+            </div>
+            
+        </form>
+
     </div>
 </body>
 </html>
