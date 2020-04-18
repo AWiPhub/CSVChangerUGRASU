@@ -8,7 +8,7 @@
         body{
             background-color: #c8c8c8;
         }
-        .upButton, .dnButton{
+        .upButton, .dnButton, .inputFIO{
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -61,28 +61,29 @@
             font-size: 18px;
             font-family: 'Times New Roman', Times, serif;
         }
+        .inputFIO{
+            width: 300px;
+            height: 25px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <script src="csvreader.py" lang="python">
-        
-    </script>
-    
     <div class="all">
-        <form action="/Obr" method="post" enctype="multipart/form-data">
-        <div class="upButton">
-                <input type="file" accept="csv" name="File" id="">
+        <form action="/ObrFIO" method="post" enctype="multipart/form-data">
+            <div class="upButton ">
+                <input type="file" accept="csv" name="file" id="">
                 <p class="TextInBtUp">Выбрать CSV файл</p>
             </div>
+            <input type="text" name="username" class="inputFIO" id="" placeholder="Введите фамилию">
             <div class="dnButton">
-                <button type="submit" class="SubmitButton">Отправить</button>
+                <button type="submit" class="SubmitButton"></button>
                 <p class="TextInBtDn">Обработать</p>
             </div>
         </form>
     </div>
-
-
-    
-
 </body>
 </html>
